@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# PyCharm
+.idea/
+*.iml
+
+# Distribution / packaging
+dist/
+tools/
+build/
+*.egg-info/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+*.swp
+
+# Docs
+docs/
+
+#Pypi
+/.pypirc

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coating-evaluation"
+dynamic = ["version"]
+description = "Evaluates coating thickness on high contrast grayscale images"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name="Dunst", email="coating-evaluation@je-dunst.de"}
+]
+license= "Apache-2.0"
+dependencies = [
+    "numpy>=1.24",
+    "opencv-python>=4.8",
+    "scikit-image>=0.22",
+    "scipy>=1.11",
+    "matplotlib>=3.8"
+]
+keywords = ["computer vision", "image processing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent"
+]
+[project.scripts]
+coating-evaluation="coating_evaluation.cli:main"
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+package-dir = {"" = "src"}
+include-package-data = true
+[tool.setuptools.dynamic]
+version = {attr = "coating_evaluation.__version__"}
+
+[project.urls]
+Homepage = "https://github.com/JD1108/coating-evaluation"
+Repository = "https://github.com/JD1108/coating-evaluation"
+Documentation = "https://github.com/JD1108/coating-evaluation#readme"
